@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
+    <title>Calcular A e B</title>
     <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
@@ -14,9 +14,10 @@
             <input type="number" id="num1" required placeholder="NumeroA" />
             <input type="number" id="num2" required placeholder="NúmeroB" />            
             <button id="btn-calcular" type="submit">Calcular</button>
+            <input type="button" value="Limpar" onClick="window.location.reload()">
         </form>
         <p class="success-message"></p>
-        
+        <p class="error-message"></p>        
     </div>
     <script src="./main.js"></script>
 </body>
