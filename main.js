@@ -7,6 +7,7 @@ form.addEventListener('submit', function(e) {
 
     const numeroB = document.getElementById('num2');
     const mensagemSucesso = `O valor <b>B</b> é válido por ser maior que <b>A</b>`
+    const mensagemErro = `Comando Inválido`
         
     formEValido = (numeroA.value) < (numeroB.value)
     if (formEValido) {
@@ -16,13 +17,16 @@ form.addEventListener('submit', function(e) {
         containerMensagemSucesso.style.display = 'block';
 
         numeroA.value = '';
-        numeroContaBeneficiario.value = '';
+        numeroB.value = '';
         
 
     } else {
-        alert(comando);
-        nomeBeneficiario.style.border = '1px solid red';
-        document.querySelector('.error-message').style.display = 'block'
-    }
-})
+        const containerMensagemErro = document.querySelector('.error-message');
+        containerMensagemErro.innerHTML = mensagemErro;
+        containerMensagemErro.style.display = 'block';
 
+        numeroA.value = '';
+        numeroB.value = '';
+
+        }
+})
